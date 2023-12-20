@@ -302,7 +302,7 @@ where
                 title,
                 id: _,
             } => {
-                self.write("<a href=\"")?;
+                self.write("<a target=\"_blank\" rel=\"noreferrer\" href=\"")?;
                 escape_href(&mut self.writer, &dest_url)?;
                 if !title.is_empty() {
                     self.write("\" title=\"")?;
